@@ -28,6 +28,8 @@ layout: null
         <item>
             <title>{{ post.title }}</title>
             <itunes:author>{{ post.author }}</itunes:author>
+            <itunes:season>{{ post.season }}</itunes:season>
+            <itunes:episode>{{ post.episode }}</itunes:episode>
             <itunes:episodeType>{{ post.episodeType }}</itunes:episodeType>
             <itunes:explicit>{{ post.explicit }}</itunes:explicit>
             <link>{{ post.url | absolute_url }}</link>

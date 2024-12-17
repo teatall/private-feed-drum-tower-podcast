@@ -1,0 +1,52 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+#
+# If you need help with YAML syntax, here are some quick references for you: 
+# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# https://learnxinyminutes.com/docs/yaml/
+#
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+title: DTP Backups
+name: A back up site
+markdown: kramdown
+permalink: /:year/:month/:day/:title
+timezone: Asia/Shanghai
+livereload: true
+author: Drum
+email: drum@economist.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+# Build settings
+theme: jekyll-theme-hydure
+
+podcast:
+  title: Drum Tower
+  description: "Two of The Economist’s China correspondents, Alice Su and David Rennie, analyse the stories at the heart of this vast country and examine its influence beyond its borders. They’ll be joined by our global network of correspondents and expert guests to examine how everything from party politics to business, technology and culture are reshaping China and the world. Published every Tuesday."
+  url: /podcast.xml
+  author: The Economist
+  email: drum@economist.com
+  logo: https://www.economist.com/media-assets/image/podcast-image/drumtower.png
+  language: en
+  category: News
+  subcategory: Politics
+  type: episodic
+  explicit: false
+  complete: 'no'
+  block: 'no'
