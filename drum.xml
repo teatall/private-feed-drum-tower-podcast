@@ -24,7 +24,7 @@ layout: null
         <itunes:explicit>{{ site.drum.explicit }}</itunes:explicit>
         <itunes:complete>{{ site.drum.complete }}</itunes:complete>
         <itunes:block>{{ site.drum.block }}</itunes:block>
-        {% for post in site.categories.drum %}
+        {% for post in site.categories.drum reversed %}
         <item>
             <title>{{ post.title }}</title>
             <itunes:author>{{ post.author | default: site.drum.author }}</itunes:author>
