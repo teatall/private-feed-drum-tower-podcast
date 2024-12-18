@@ -1,0 +1,40 @@
+<footer class="mt-5 py-4 bg-light">
+
+  <div class="container-responsive">
+
+
+    <div class="row pt-3">
+      <div class="col-sm">
+
+        <ul class="list-inline small text-muted float-md-right footer-nav d-print-none">
+          
+        {% assign navigations = site.pages | where:"nav_group","footer" | sort: 'title' %}
+        {% for item in navigations %}
+          <li class="list-inline-item">
+            <a href="{{ item.url }}" class="text-muted footer-nav-item {% if item.url == page.url %}active{% endif %}">
+              {{ item.title }}
+            </a>
+          </li>
+        {% endfor %}
+          <li class="list-inline-item">
+            <a href="/atom.xml" class="text-muted footer-nav-item">RSS</a>
+          </li>
+          
+        </ul>
+        
+        <div class="text-muted small">
+          <p class="mb-0 h4"><i class="fi fi-cc-cc"></i><i class="fi fi-cc-by"></i><i class="fi fi-cc-nc"></i><i class="fi fi-cc-sa"></i></p>
+          <p class="small">Unless otherwisely noted, content on this website is licensed under:<br />
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" class="text-muted">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</a>
+          </p>
+        </div>
+        
+        <a id="to-top" href="#top" class="sjump btn btn-secondary d-print-none"><i class="fas fa-chevron-up"></i><span class="sr-only">Back to top</span></a>
+
+    
+      </div>
+    </div>
+
+  </div>
+
+</footer>

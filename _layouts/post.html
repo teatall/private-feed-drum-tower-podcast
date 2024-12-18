@@ -1,0 +1,40 @@
+---
+layout: default
+---
+<h1 class="hyphenate">{{ page.title }}</h1>
+<hr>
+<ul class="list-inline text-truncate text-muted small meta">
+  <li class="list-inline-item author"><i class="fi fi-user mr-1"></i>{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}</li>
+  <li class="list-inline-item time"><i class="fi fi-calendar mr-1"></i>{{ page.date | date_to_string }}</li>
+  {% if page.tags.size > 0 %}<li class="list-inline-item time"><i class="fi fi-tag mr-1"></i>{{ page.tags | sort | join: ", " }}</li>{% endif %}
+</ul>
+<hr>
+<main class="post clearfix">
+  {{ content }}
+</main>
+<ul class="nav small my-5 nav-pills nav-justified">
+  <li class="nav-item text-left">
+    {% if page.next.url %}
+    <a href="{{page.next.url}}" class="nav-link pr-0 d-flex justify-content-start"><i class="fi fi-arrow-left p-1"></i>{{page.next.title}}</a>
+    {% else %}
+    <a class="nav-link disabled"></a>
+    {% endif %}
+  </li>
+  <li class="nav-item text-right">
+    {% if page.previous.url %}
+    <a href="{{page.previous.url}}" class="nav-link pl-0 d-flex justify-content-end">{{page.previous.title}}<i class="fi fi-arrow-right p-1"></i></a>
+    {% else %}
+    <a class="nav-link disabled"></a>
+    {% endif %}
+  </li>
+</ul>
+<div class="twikoo-comments-wrap larger-inputs">
+  <h2 class="mt-5 text-primary">Comments</h2>
+  <div id="tcomment"></div>
+</div>
+<script>
+  twikoo.init({
+    envId: 'https://blog-comments.dastle.top',
+    el: '#tcomment',
+  })
+  </script>

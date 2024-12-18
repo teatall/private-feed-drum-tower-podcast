@@ -1,0 +1,14 @@
+<script src='https://cdn.jsdelivr.net/gh/teatall/zhoues-cdn/waline/Waline.twk.min.js'></script>
+<h2 class="my-3">Comments</h2>
+<div id="waline-comments"></div>
+<script>
+  new Waline({
+    el: '#waline-comments',
+    path: location.pathname,
+    serverURL: 'https://dastle-blog-waline-comments.vercel.app',
+    lang: 'en',
+    requiredFields: ['nick','mail'],
+    anonymous: true,
+    placeholder: 'Leave your comments here ...',
+  });
+</script>

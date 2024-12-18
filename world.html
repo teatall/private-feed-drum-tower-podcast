@@ -1,0 +1,23 @@
+---
+title: World
+layout: default
+nav_group: nav
+nav_order: 300
+desc: "People and stories I have come across while I travel around the world."
+target_tag: world
+---
+<h1 class="text-uppercase"><i class="fi fi-briefcase fa-fw mr-1"></i>{{ page.target_tag }}</h1>
+<p class="lead">{{ page.desc }}</p>
+<div class="infinite-scroll-container list-group list-group-flush">
+{% for post in site.tags[page.target_tag] %}
+  <article class="post list-group-item px-0">
+    <h2 class="card-title"><a class="text-decoration-none" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
+    <p>{{ post.abstract }} <a href="{{ post.url }}" title="{{ post.title }}" class="badge badge-primary">Read on<i class="fi fi-arrow-right ml-1"></i></a></p>
+		<ul class="list-inline text-truncate text-muted small meta">
+			<li class="list-inline-item time"><i class="fi fi-calendar mr-1"></i>{{ post.date | date_to_string }}</li>
+			{% if post.tags.size > 0 %}<li class="list-inline-item tags"><i class="fi fi-tag mr-1"></i>{{ post.tags | sort | join: ", " }}</li>{% endif %}
+		</ul>
+  </article>
+{% endfor %}
+</div>
+
