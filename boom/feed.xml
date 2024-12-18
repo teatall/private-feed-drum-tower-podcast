@@ -1,0 +1,41 @@
+---
+layout: null
+---
+<?xml version='1.0' encoding='utf-8'?>
+<rss version='2.0' xmlns:content='http://purl.org/rss/1.0/modules/content/' xmlns:itunes='http://www.itunes.com/dtds/podcast-1.0.dtd'>
+    <channel>
+        <title>{{ site.boom.title }}</title>
+        <description>{{ site.boom.description }}</description>
+        <link>{{ '/' | absolute_url }}</link>
+        <itunes:author>{{ site.boom.author }}</itunes:author>
+        <itunes:email>{{ site.boom.email }}</itunes:email>
+        <itunes:image href='{{ site.boom.logo | absolute_url }}'/>
+        <language>{{ site.boom.language }}</language>
+        <copyright>copyright © {{ site.boom.author }}</copyright>
+        <itunes:owner>
+            <itunes:name>{{ site.boom.author }}</itunes:name>
+            <itunes:email>{{ site.boom.email }}</itunes:email>
+        </itunes:owner>
+        <itunes:category text='{{ site.boom.category }}'>
+            <itunes:category text='{{ site.boom.subcategory }}'/>
+        </itunes:category>
+        <itunes:type>{{ site.boom.type }}</itunes:type>
+        <itunes:explicit>{{ site.boom.explicit }}</itunes:explicit>
+        <itunes:complete>{{ site.boom.complete }}</itunes:complete>
+        <itunes:block>{{ site.boom.block }}</itunes:block>
+        {% for post in site.categories.boom reversed %}
+        <item>
+            <title>{{ post.title }}</title>
+            <itunes:author>{{ post.author | default: site.boom.author }}</itunes:author>
+            <itunes:explicit>{{ post.explicit | default: site.boom.explicit }}</itunes:explicit>
+            <itunes:season>{{ post.season | default: site.boom.title }}</itunes:season>
+            <itunes:episodeType>{{ post.episodeType | default: 'full' }}</itunes:episodeType>
+            <link>{{ post.url | absolute_url }}</link>
+            <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+            <itunes:duration>{{ post.length | xml_escape }}</itunes:duration>
+            <enclosure url='{{ post.audio | absolute_url | xml_escape }}' length='{{ post.length | xml_escape }}'/>
+            <description>{{ post.content | xml_escape | strip_newlines }}</description>
+        </item>
+        {% endfor %}
+    </channel>
+</rss>

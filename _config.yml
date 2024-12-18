@@ -63,7 +63,7 @@ plugins:
 drum:
   title: "Drum Tower"
   description: "Two of The Economist’s China correspondents, Alice Su and David Rennie, analyse the stories at the heart of this vast country and examine its influence beyond its borders."
-  url: /drum.xml # podcast xml url
+  url: /drum/feed.xml # podcast xml url
   author: "The Economist"
   email: drum@economist.com
   logo: /drum/icon.png # logo in 1400 – 3000 pixel
@@ -73,4 +73,19 @@ drum:
   type: episodic # episodic | serial
   explicit: false # true | false
   complete: "no" # 'yes' | 'no'
-  block: "no" # 'yes' | 'no'
+  block: "yes" # 'yes' | 'no'
+
+boom:
+  title: "Boom!"
+  description: "How did two old, unpopular men end up running for the world’s most demanding job? The answer lies in the peculiar politics of the generation born in the era of the bomb. It’s a generation that has enjoyed extraordinary wealth and progress. Yet their last act in politics sees the two main parties accusing each other of wrecking American democracy. As the boomers near the end of their political journey, John Prideaux, The Economist’s US editor, tries to make sense of their inheritance and their legacy."
+  url: /boom/feed.xml # podcast xml url
+  author: "The Economist"
+  email: boom@economist.com
+  logo: /boom/icon.png # logo in 1400 – 3000 pixel
+  language: en # http://www.loc.gov/standards/iso639-2/php/code_list.php
+  category: History # https://help.apple.com/itc/podcasts_connect/#/itc9267a2f12
+  subcategory: Politics
+  type: serial # episodic | serial
+  explicit: false # true | false
+  complete: "yes" # 'yes' | 'no'
+  block: "yes" # 'yes' | 'no'
