@@ -29,7 +29,6 @@ layout: null
             <itunes:author>{{ post.author | default: site.drum.author }}</itunes:author>
             <itunes:explicit>{{ post.explicit | default: site.drum.explicit }}</itunes:explicit>
             <itunes:season>{{ post.season | default: site.drum.title }}</itunes:season>
-            <itunes:episode>{{ post.date | date: "%Y%m%d"}}</itunes:episode>
             <itunes:episodeType>{{ post.episodeType | default: 'full' }}</itunes:episodeType>
             <link>{{ post.url | absolute_url }}</link>
             <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>

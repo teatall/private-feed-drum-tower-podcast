@@ -70,7 +70,7 @@ drum:
   language: en # http://www.loc.gov/standards/iso639-2/php/code_list.php
   category: News # https://help.apple.com/itc/podcasts_connect/#/itc9267a2f12
   subcategory: Politics
-  type: serial # episodic | serial
+  type: episodic # episodic | serial
   explicit: false # true | false
   complete: "no" # 'yes' | 'no'
   block: "no" # 'yes' | 'no'
