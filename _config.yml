@@ -66,7 +66,7 @@ drum:
   url: /drum.xml # podcast xml url
   author: "The Economist"
   email: drum@economist.com
-  logo: https://www.economist.com/media-assets/image/podcast-image/drumtower.png # logo in 1400 – 3000 pixel
+  logo: /drum/icon.png # logo in 1400 – 3000 pixel
   language: en # http://www.loc.gov/standards/iso639-2/php/code_list.php
   category: News # https://help.apple.com/itc/podcasts_connect/#/itc9267a2f12
   subcategory: Politics
