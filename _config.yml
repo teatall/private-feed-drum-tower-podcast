@@ -31,7 +31,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://pods.dastle.top" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
 
@@ -59,3 +59,18 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+drum:
+  title: "Drum Tower"
+  description: "Two of The Economist’s China correspondents, Alice Su and David Rennie, analyse the stories at the heart of this vast country and examine its influence beyond its borders."
+  url: /drum.xml # podcast xml url
+  author: "The Economist"
+  email: drum@economist.com
+  logo: https://www.economist.com/media-assets/image/podcast-image/drumtower.png # logo in 1400 – 3000 pixel
+  language: en # http://www.loc.gov/standards/iso639-2/php/code_list.php
+  category: News # https://help.apple.com/itc/podcasts_connect/#/itc9267a2f12
+  subcategory: Politics
+  type: serial # episodic | serial
+  explicit: false # true | false
+  complete: "no" # 'yes' | 'no'
+  block: "no" # 'yes' | 'no'
