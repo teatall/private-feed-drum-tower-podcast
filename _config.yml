@@ -89,3 +89,19 @@ boom:
   explicit: false # true | false
   complete: "yes" # 'yes' | 'no'
   block: "yes" # 'yes' | 'no'
+
+
+modi:
+  title: "The Modi Raj"
+  description: "India’s prime minister is eyeing a third term atop the world’s biggest democracy. Narendra Modi began life as an outsider and he remains hard to fathom. His ten years in charge have seen rapid economic expansion. But he’s also the frontman for a chauvinistic Hindu nationalist dogma. Avantika Chilkoti finds out if Mr Modi can continue to balance both parts of his agenda to finish the job of turning India into a superpower."
+  url: /modi/feed.xml # podcast xml url
+  author: "The Economist"
+  email: modi@economist.com
+  logo: /modi/icon.png # logo in 1400 – 3000 pixel
+  language: en # http://www.loc.gov/standards/iso639-2/php/code_list.php
+  category: History # https://help.apple.com/itc/podcasts_connect/#/itc9267a2f12
+  subcategory: Politics
+  type: serial # episodic | serial
+  explicit: false # true | false
+  complete: "yes" # 'yes' | 'no'
+  block: "yes" # 'yes' | 'no'
